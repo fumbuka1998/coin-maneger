@@ -28,7 +28,7 @@ Auth::routes();
 Route::get('/redirectUser', [HomeController::class, 'redirectUser']);
 
 // Route::get('users', [HomeController::class, 'index']);
-Route::get('fetchusers', [HomeController::class, 'fetchStudents']);
+Route::get('fetchusers', [HomeController::class, 'fetchUsers']);
 Route::post('userstore', [HomeController::class, 'store']);
 Route::get('edit-user/{id}', [HomeController::class, 'edit']);
 Route::put('update_user/{id}', [HomeController::class, 'update']);
