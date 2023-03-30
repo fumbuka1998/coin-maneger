@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+// use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
@@ -50,12 +51,13 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+           
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'account_no' => ['required', 'string', 'max:255'],
-            'address' => ['required', 'string', 'max:255'],
-            'phone' => ['required', 'string', 'max:255'],
-            'profile_pic' => ['required|image|size:8024'],
+            // 'account_no' => ['required', 'string', 'max:255'],
+            // 'address' => ['required', 'string', 'max:255'],
+            // 'phone' => ['required', 'string', 'max:255'],
+            // 'profile_pic' => ['required|image|size:4024'],
             'password' => ['required', 'string', 'min:8', 'confirmed']
         ]);
     }
@@ -71,20 +73,19 @@ class RegisterController extends Controller
 
     protected function create(array $data)
     {
-        var_dump($data);
-        exit();
-        if (request()->hasfile('profile_pic')) {
-            $picName = time() . '.' . request()->profile_pic->getClientOriginalExtension();
-            request()->profile_pic->move(public_path('image'), $picName);
+        
+        if (request()->hasfile('avatar')) {
+            $picName = time() . '.' . request()->avatar->getClientOriginalExtension();
+            request()->avatar->move(public_path('image'), $picName);
         }
 
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'account_no' => $data['account_no'],
+            'account_no' => $data['account'],
             'address' => $data['address'],
             'phone' => $data['phone'],
-            'profile_pic' => $picName,
+            'avatar' => $picName,
             'password' => Hash::make($data['password']),
         ]);
 
