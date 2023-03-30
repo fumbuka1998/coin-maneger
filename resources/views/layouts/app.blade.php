@@ -21,6 +21,36 @@
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../../assets/css/dataTables.bootstrap5.min.css" />
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <style>
+        ul{
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            justify-content:space-between;
+        }
+        
+        section{
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+       .row2 ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+       }
+        /* div{
+            width: 7rem;
+            background-color: bisque;
+            border-radius: 0.25rem;
+            text-align: center;
+        
+        } */
+
+    </style>
 </head>
 <body>
     <div id="app ">

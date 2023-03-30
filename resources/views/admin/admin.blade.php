@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- add user model -->
-    <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    {{-- <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -11,7 +11,7 @@
                 </div>
                 <div class="modal-body">
                     {{-- display error validations --}}
-                    <ul id="saveform_errlist"></ul>
+                    {{-- <ul id="saveform_errlist"></ul>
 
                     <div class="form-control mb-3">
                         <label for="">Name</label>
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}} 
     {{-- end of add user modal --}}
 
      <!-- edit user model -->
@@ -121,8 +121,8 @@
                     <div class="card-header">
                         <h4>
                             User Data
-                            <a href="#" class="btn btn-primary float-end btn-sm" data-bs-toggle="modal"
-                                data-bs-target="#addUserModal">Add user</a>
+                            {{-- <a href="#" class="btn btn-primary float-end btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#addUserModal">Add user</a> --}}
                         </h4>
                     </div>
                     <div class="card-body">
