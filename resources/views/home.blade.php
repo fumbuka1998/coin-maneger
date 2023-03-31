@@ -10,10 +10,10 @@
                 
                     <div class="row1">
                         <ul>
-                            <li><h1>HELLO</h1>
+                            <li><h1><i>HELLO</i></h1>
                                 {{ Auth::user()->name }}
                             </li>
-                            <li>{{ Auth::user()->avatar }}</li>
+                            <li><img src="../../image/user1.png"  style="width:4.25rem"></li>
                         </ul>
                     </div>
                     <div class="row2 ">
