@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../../assets/css/dataTables.bootstrap5.min.css" />
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-    {{-- <style>
+    <style>
         ul {
             list-style-type: none;
             display: flex;
@@ -49,7 +49,7 @@
             text-align: center;
         
         } */
-    </style> --}}
+    </style>
 </head>
 
 <body>
@@ -122,8 +122,8 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
         crossorigin="anonymous"></script>
-    @yield('scripts')
-    {{-- @yield('scripts2') --}}
+
+    @yield('scripts2')
 </body>
 
 </html>

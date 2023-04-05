@@ -1,44 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- add user model -->
-    {{-- <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add User</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    {{-- display error validations --}}
-                    {{-- <ul id="saveform_errlist"></ul>
-
-                    <div class="form-control mb-3">
-                        <label for="">Name</label>
-                        <input type="text" class="name form-control">
-                    </div>
-                    <div class="form-control mb-3">
-                        <label for="">Email</label>
-                        <input type="text" class="email form-control">
-                    </div>
-                    <div class="form-control mb-3">
-                        <label for="">Account</label>
-                        <input type="text" class="account_no form-control">
-                    </div>
-                    <div class="form-control mb-3">
-                        <label for="">Amount</label>
-                        <input type="text" class="amount form-control">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary add_user">Add User</button>
-                </div>
-            </div>
-        </div>
-    </div> --}} 
-    {{-- end of add user modal --}}
-
+    
      <!-- edit user model -->
      <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
