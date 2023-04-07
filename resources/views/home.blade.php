@@ -60,7 +60,6 @@
                                     </div>
                                     <div class="modal-body">
 
-
                                         <input type="hidden" id="delete_histr_id" class="id form-control">
                                         <h3>are you sure you want to delete this Report?</h3>
                                     </div>
@@ -84,13 +83,14 @@
                                 <div class="card-header">
                                     <h4>
                                         {{ Auth::user()->name }} {{ __('Scan History') }}
-                                        {{-- <a href="#" class="btn btn-primary float-end btn-sm" data-bs-toggle="modal"
-                                        data-bs-target="#addUserModal">Add user</a> --}}
+                                        {{-- <a href="#" id="getinfo" class="btn btn-primary float-end btn-sm" value={{ Auth::user()->account_no  }}>get info</a> --}}
+                                        
                                     </h4>
                                 </div>
                                 <div class="card-body">
 
                                     <table class="table table-bordered  table-striper table-hover">
+                                        {{-- <input type="hidden" id="account_no" class="accNo" value="{{ Auth::user()->account_no }}"> --}}
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
@@ -121,26 +121,44 @@
 @section('scripts2')
     <script>
         $(document).ready(function() {
+
+            
+            // alert(2);
+            // {{ Auth::user()->account_no }}
+            // var account_no = user_reports()->account_no;
+            // var account_no = $(this).val();
+
+            //follow up
+//             $.ajax({
+//     url: '/fetch-data/' + account_no,
+//     type: 'GET',
+//     success: function(dataList) {
+//         // Do something with the retrieved data list
+//     },
+//     error: function() {
+//         // Handle error
+//     }
+// });
             // alert(1);
             fetchHistory()
             //ajax function to get data from the database
             function fetchHistory() {
                 $.ajax({
                     type: 'GET',
-                    url: '/fetchReport',
+                    url: '/fetchReport/',
                     dataType: 'json',
                     success: function(response) {
 
                         $('tbody').html(""); //empty he table first
                         // alert(1);
-                        console.log(response.user_reports);
+                        // console.log(response.user_reports);
                         $.each(response.user_reports, function(key, item) {
                             $('tbody').append(
                                 `<tr>
                                         <td>` + item.id + `</td>
                                         <td>` + item.account_no + `</td>
                                         <td>` + item.amount + `</td>
-                                        <td>` + item.date + `</td>
+                                        <td>` + item.created_at + `</td>
                                         
                                         <td><button type="button" value="` + item.id + `"
                                                 class="delete_history btn btn-danger btn-sm">delete</button></td>

@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User_report;
+use Illuminate\Support\Facades\DB;
 
 class HistoryController extends Controller
 {
     //fetch history fro the table
     public function fetchReport()
     {
-        $history = User_report::all();
+       
+        $history = User_report::where('account_no', auth()->user()->account_no)->get();
+
         // var_dump($history);
         // exit();
 

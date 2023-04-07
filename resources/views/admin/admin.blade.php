@@ -129,7 +129,7 @@
                     dataType: 'json',
                     success: function(response) {
 
-                        $('tbody').html(""); //empty he table first
+                        $('tbody').html(""); //empty the table first
                         // alert(1);
                         // console.log(response.users);
                         $.each(response.users, function(key, item) {
@@ -155,7 +155,7 @@
             // an ajax function to delete data from the list
             $(document).on('click', '.delete_user', function(e){
                 e.preventDefault();
-
+                    
                 var std_id = $(this).val();
                 // alert(std_id);
                 $('#delete_user_id').val(std_id);
